@@ -1,0 +1,12 @@
+.partij
+{
+    float: left;
+    margin: 20px;
+    background-color: lightblue;
+    border: blue solid 4px;
+    padding: 10px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
