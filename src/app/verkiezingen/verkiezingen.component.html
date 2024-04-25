@@ -1,3 +1,17 @@
 
-<div class="partij" *ngFor="let p of partijen">{{ p.Naam }}</div>
+
+<h2>Er zijn {{ partijen.length }} politieke partijen in Nederland</h2>
+
+<div class="partij" [class]="{ selected: p.Selected }" (click)="toggle(p)" *ngFor="let p of partijen">{{ p.Naam }}</div>
+
+<br style="clear: both" />
+
+<p>
+    Er zijn in totaal {{ totaalZetels() }} zetels. Deze coalitie heeft er {{ totaalSelected() }}.
+</p>
+
+<svg>
+    <rect x="0" y="0" width="150" height="25" fill="lightgrey"></rect>
+    <rect x="0" y="0" [attr.width]="totaalSelected()" height="25" [attr.fill]="kleur()"></rect>
+</svg>
 
